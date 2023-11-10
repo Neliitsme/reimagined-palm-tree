@@ -39,4 +39,9 @@ public class Artist
     public List<Piece> ReleasedTracks { get; set; }
 
     public List<string> TrackGenres => ReleasedTracks.SelectMany(rt => rt.Genres).Distinct().ToList();
+
+    public override string ToString()
+    {
+        return Alias;
+    }
 }

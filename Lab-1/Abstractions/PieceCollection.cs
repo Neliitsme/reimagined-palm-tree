@@ -30,4 +30,9 @@ public abstract class PieceCollection : INamed
     public List<string> Genres => TrackList.SelectMany(t => t.Genres).Distinct().ToList();
 
     public string Name { get; set; }
+
+    public override string ToString()
+    {
+        return $"\"{Name}\"";
+    }
 }

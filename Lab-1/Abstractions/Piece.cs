@@ -39,4 +39,9 @@ public abstract class Piece : INamed
     public int Length { get; set; }
 
     public string Name { get; set; }
+
+    public override string ToString()
+    {
+        return $"{Author.Alias} - {Name}";
+    }
 }
